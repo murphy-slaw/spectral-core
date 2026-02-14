@@ -1,4 +1,4 @@
-package net.funkpla.examplemod;
+package net.funkpla.spectrum_cloak_tweaks;
 
 import net.minecraftforge.fml.common.Mod;
 

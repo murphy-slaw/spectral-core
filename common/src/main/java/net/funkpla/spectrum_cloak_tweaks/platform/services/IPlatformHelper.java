@@ -1,4 +1,4 @@
-package net.funkpla.examplemod.platform.services;
+package net.funkpla.spectrum_cloak_tweaks.platform.services;
 
 public interface IPlatformHelper {
 

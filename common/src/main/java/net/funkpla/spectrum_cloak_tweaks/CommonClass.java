@@ -1,6 +1,6 @@
-package net.funkpla.examplemod;
+package net.funkpla.spectrum_cloak_tweaks;
 
-import net.funkpla.examplemod.platform.Services;
+import net.funkpla.spectrum_cloak_tweaks.platform.Services;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Items;
 
@@ -23,9 +23,9 @@ public class CommonClass {
         // your own abstraction layer. You can learn more about this in our provided services class. In this example
         // we have an interface in the common code and use a loader specific implementation to delegate our call to
         // the platform specific approach.
-        if (Services.PLATFORM.isModLoaded("examplemod")) {
+        if (Services.PLATFORM.isModLoaded("spectrum_cloak_tweaks")) {
 
-            Constants.LOG.info("Hello to examplemod");
+            Constants.LOG.info("Hello to spectrum_cloak_tweaks");
         }
     }
 }

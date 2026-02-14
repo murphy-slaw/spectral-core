@@ -1,8 +1,8 @@
-package net.funkpla.examplemod;
+package net.funkpla.spectrum_cloak_tweaks;
 
 import net.fabricmc.api.ModInitializer;
 
-public class ExampleMod implements ModInitializer {
+public class SpectrumCloakTweaks implements ModInitializer {
     
     @Override
     public void onInitialize() {

@@ -15,7 +15,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "net.funkpla.examplemod.ExampleMod"
+            "net.funkpla.spectrum_cloak_tweaks.SpectrumCloakTweaks"
         ]
     },
     "mixins": [

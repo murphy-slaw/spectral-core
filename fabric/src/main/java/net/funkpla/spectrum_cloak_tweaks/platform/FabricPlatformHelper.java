@@ -1,6 +1,6 @@
-package net.funkpla.examplemod.platform;
+package net.funkpla.spectrum_cloak_tweaks.platform;
 
-import net.funkpla.examplemod.platform.services.IPlatformHelper;
+import net.funkpla.spectrum_cloak_tweaks.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class FabricPlatformHelper implements IPlatformHelper {
