@@ -1,6 +1,6 @@
-package net.funkpla.spectrum_cloak_tweaks.mixin;
+package net.funkpla.spectral_core.mixin;
 
-import net.funkpla.spectrum_cloak_tweaks.Constants;
+import net.funkpla.spectral_core.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;

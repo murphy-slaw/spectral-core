@@ -1,6 +1,6 @@
 {
     "schemaVersion": 1,
-    "id": "examplemod",
+    "id": "spectral-core",
     "version": "${version}",
     "name": "${mod_name}",
     "description": "${description}",
@@ -8,14 +8,14 @@
         "${mod_author}"
     ],
     "contact": {
-        "sources": "https://github.com/murphy_slaw/examplemod"
+        "sources": "https://github.com/murphy_slaw/spectral_core"
     },
     "license": "${license}",
     "icon": "${mod_id}.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-            "net.funkpla.spectrum_cloak_tweaks.SpectrumCloakTweaks"
+            "net.funkpla.spectral_core.SpectralCore"
         ]
     },
     "mixins": [

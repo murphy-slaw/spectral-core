@@ -1,4 +1,4 @@
-package net.funkpla.spectrum_cloak_tweaks.platform.services;
+package net.funkpla.spectral_core.platform.services;
 
 public interface IPlatformHelper {
 

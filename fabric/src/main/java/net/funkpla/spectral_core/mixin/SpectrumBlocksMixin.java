@@ -1,4 +1,4 @@
-package net.funkpla.spectrum_cloak_tweaks.mixin;
+package net.funkpla.spectral_core.mixin;
 
 import de.dafuqs.spectrum.blocks.conditional.CloakedOreBlock;
 import de.dafuqs.spectrum.registries.SpectrumAdvancements;

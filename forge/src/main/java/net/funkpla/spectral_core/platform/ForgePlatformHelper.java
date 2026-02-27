@@ -1,6 +1,6 @@
-package net.funkpla.spectrum_cloak_tweaks.platform;
+package net.funkpla.spectral_core.platform;
 
-import net.funkpla.spectrum_cloak_tweaks.platform.services.IPlatformHelper;
+import net.funkpla.spectral_core.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
 
