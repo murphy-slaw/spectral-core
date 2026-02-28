@@ -25,7 +25,6 @@ public class SpectrumBlocksMixin {
               args = "class=de/dafuqs/spectrum/blocks/conditional/CloakedOreBlock",
               value = "NEW",
               ordinal = 4))
-  @Unique
   private static CloakedOreBlock replacePalteria(
       BlockBehaviour.Properties settings,
       UniformInt uniformIntProvider,
