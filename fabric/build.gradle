@@ -14,6 +14,7 @@ repositories {
         name = "Modrinth"
         url = "https://api.modrinth.com/maven/"
     }
+    maven { url = "https://repo.repsy.io/mvn/lucraft/threetag/"}
 }
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
@@ -49,6 +50,8 @@ dependencies {
     modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
     modImplementation("com.github.emilyploszaj:step-height-entity-attribute:${project.step_height_attribute_version}")
 
+    modImplementation("maven.modrinth:gliders:${gliders_version}+fabric")
+    modImplementation("net.threetag:PalladiumCore:${palladium_core_version}")
 
 
     modImplementation("maven.modrinth:spectrum:${project.spectrum_version}") {
