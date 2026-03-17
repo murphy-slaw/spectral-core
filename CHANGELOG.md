@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.4] 2026-03-16
 
-## Added
+### Added
 - Removed built-in repair recipes from vc_gliders to allow them to be replaced with Tinkerer's Smithing
 
 ## [1.0.3]
