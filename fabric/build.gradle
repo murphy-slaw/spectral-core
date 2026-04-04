@@ -15,7 +15,9 @@ repositories {
         url = "https://api.modrinth.com/maven/"
     }
     maven { url = "https://repo.repsy.io/mvn/lucraft/threetag/"}
+    maven { url 'https://repo.sleeping.town/' }
 }
+
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     mappings loom.layered {
@@ -45,13 +47,12 @@ dependencies {
     modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-level:${project.cca_version}")
 
 
-
     modImplementation("com.klikli_dev:modonomicon-${project.minecraft_version}-fabric:${project.modonomicon_version}") { exclude(group: "com.klikli_dev") }
     modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
     modImplementation("com.github.emilyploszaj:step-height-entity-attribute:${project.step_height_attribute_version}")
 
-    modImplementation("maven.modrinth:gliders:${gliders_version}+fabric")
-    modImplementation("net.threetag:PalladiumCore:${palladium_core_version}")
+    modCompileOnly("maven.modrinth:gliders:${gliders_version}+fabric")
+    modCompileOnly("net.threetag:PalladiumCore:${palladium_core_version}")
 
 
     modImplementation("maven.modrinth:spectrum:${project.spectrum_version}") {
@@ -61,6 +62,9 @@ dependencies {
 
     modApi("com.terraformersmc:modmenu:${modmenu_version}")
     modImplementation 'maven.modrinth:pocket-repose:1.2.7-1.20.1'
+    implementation 'folk.sisby:kaleido-config:0.3.3+1.3.2'
+    modImplementation("maven.modrinth:tinkerers-smithing:${tinkerers_version}")
+
 }
 
 loom {
