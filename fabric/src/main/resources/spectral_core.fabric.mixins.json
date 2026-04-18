@@ -8,7 +8,9 @@
         "BedrockAnvilScreenHandlerMixin",
         "GliderEventsMixin",
         "PlayerRespawnLogicMixin",
-        "SpectrumBlocksMixin"
+        "ServerLevelMixin",
+        "SpectrumBlocksMixin",
+        "StructureCheckMixin"
     ],
     "client": [
     ],
