@@ -1,8 +1,10 @@
 package net.funkpla.spectral_core;
 
 import net.funkpla.spectral_core.platform.Services;
+import net.funkpla.spectral_core.platform.registration.RegistrationProvider;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.Items;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 
 // This class is part of the common project meaning it is shared between all supported loaders. Code written here can only
 // import and access the vanilla codebase, libraries used by vanilla, and optionally third party libraries that provide
@@ -10,13 +12,17 @@ import net.minecraft.world.item.Items;
 // however it will be compatible with all supported mod loaders.
 public class CommonClass {
 
-    // The loader specific projects are able to import and use any code from the common project. This allows you to
-    // write the majority of your code here and load it from your loader specific projects. This example has some
-    // code that gets invoked by the entry point of the loader specific projects.
+    public static final RegistrationProvider<Item> ITEMS =
+            RegistrationProvider.get(BuiltInRegistries.ITEM, Constants.MOD_ID);
+    public static ResourceLocation locate(String path) {
+        return new ResourceLocation(Constants.MOD_ID, path);
+    }
+
     public static void init() {
         if (Services.PLATFORM.isModLoaded("spectral_core")) {
 
             Constants.LOG.info("Spectral Core loading…");
         }
+        CoreItems.register();
     }
 }
