@@ -6,7 +6,11 @@
     "compatibilityLevel": "JAVA_17",
     "mixins": [
         "BedrockAnvilScreenHandlerMixin",
+        "CookingRecipeOutputAccessor",
         "GliderEventsMixin",
+        "LavaLevelMixin",
+        "MixinCookingPotRecipe",
+        "MixinCookingPotRecipeSerializer",
         "PlayerRespawnLogicMixin",
         "ServerLevelMixin",
         "SpectrumBlocksMixin",

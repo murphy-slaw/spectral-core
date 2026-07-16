@@ -14,8 +14,14 @@ repositories {
         name = "Modrinth"
         url = "https://api.modrinth.com/maven/"
     }
-    maven { url = "https://repo.repsy.io/mvn/lucraft/threetag/"}
+    maven { url = "https://repo.repsy.io/mvn/lucraft/threetag/" }
     maven { url 'https://repo.sleeping.town/' }
+    maven {
+        name = "Greenhouse Maven"
+        url = 'https://maven.greenhouse.lgbt/releases/'
+    }
+    maven { url = "https://mvn.devos.one/snapshots/" } // Porting Lib Betas
+    maven { url = "https://mvn.devos.one/releases/" } // Porting Lib
 }
 
 dependencies {
@@ -64,7 +70,10 @@ dependencies {
     modImplementation 'maven.modrinth:pocket-repose:1.2.7-1.20.1'
     implementation 'folk.sisby:kaleido-config:0.3.3+1.3.2'
     modImplementation("maven.modrinth:tinkerers-smithing:${tinkerers_version}")
-
+    modImplementation("vectorwing:FarmersDelight:${fdrf_version}") {
+        exclude(group: "net.fabricmc")
+    }
+    modImplementation "maven.modrinth:r5RAxLHh:5b7PqTVu" // nbt recipes
 }
 
 loom {
