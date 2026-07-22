@@ -6,7 +6,7 @@ import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(value = NoiseBasedChunkGenerator.class, priority = 10000)
+@Mixin(NoiseBasedChunkGenerator.class)
 public class LavaLevelMixin {
   @ModifyExpressionValue(
       method = "createFluidPicker",
