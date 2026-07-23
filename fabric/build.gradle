@@ -22,6 +22,11 @@ repositories {
     }
     maven { url = "https://mvn.devos.one/snapshots/" } // Porting Lib Betas
     maven { url = "https://mvn.devos.one/releases/" } // Porting Lib
+    maven {
+        name = 'Illusive Soulworks'
+        url = 'https://maven.theillusivec4.top/'
+    }
+
 }
 
 dependencies {
@@ -74,6 +79,9 @@ dependencies {
         exclude(group: "net.fabricmc")
     }
     modImplementation "maven.modrinth:r5RAxLHh:5b7PqTVu" // nbt recipes
+    modImplementation "maven.modrinth:comforts:pMr60Kkq"
+    modImplementation group: 'com.illusivesoulworks.spectrelib', name: 'spectrelib-fabric', version: "${spectrelib_version}"
+
 }
 
 loom {

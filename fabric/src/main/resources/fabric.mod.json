@@ -16,6 +16,9 @@
     "entrypoints": {
         "main": [
             "net.funkpla.spectral_core.SpectralCore"
+        ],
+        "client": [
+            "net.funkpla.spectral_core.SpectralCoreClient"
         ]
     },
     "mixins": [

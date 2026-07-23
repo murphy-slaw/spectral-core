@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shaped",
+    "key": {
+        "h": {
+            "item": "minecraft:hay_bale"
+        }
+    },
+    "pattern": [
+        "hhh"
+    ],
+    "result": {
+        "item": "spectral_core:bedroll"
+    }
+}
