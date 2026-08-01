@@ -26,21 +26,20 @@ public abstract class MixinCookingPotRecipeSerializer {
   @Unique private static final String DATA_TAG = "data";
 
   @Inject(
-      method =
-          "fromJson(Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonObject;)Lvectorwing/farmersdelight/common/crafting/CookingPotRecipe;",
+      method = "fromJson(Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonObject;)Lvectorwing/farmersdelight/common/crafting/CookingPotRecipe;",
       at = @At(value = "RETURN", remap = false),
       cancellable = true)
   private static void getRecipesNbtData(
       ResourceLocation recipeId,
       JsonObject json,
       CallbackInfoReturnable<CookingPotRecipe> cir,
-      @Local(name = "groupIn") String groupIn,
-      @Local(name = "inputItemsIn") NonNullList<Ingredient> inputItemsIn,
-      @Local(name = "tabIn") CookingPotRecipeBookTab tabIn,
-      @Local(name = "outputIn") ItemStack outputIn,
+      @Local(name = "group") String group,
+      @Local(name = "inputItems") NonNullList<Ingredient> inputItems,
+      @Local(name = "tab") CookingPotRecipeBookTab tab,
+      @Local(name = "output") ItemStack output,
       @Local(name = "container") ItemStack container,
-      @Local(name = "experienceIn") float experienceIn,
-      @Local(name = "cookTimeIn") int cookTimeIn) {
+      @Local(name = "experience") float experience,
+      @Local(name = "cookTime") int cookTime) {
 
     CompoundTag currentNbtData = null;
 
@@ -65,13 +64,13 @@ public abstract class MixinCookingPotRecipeSerializer {
       CookingPotRecipe recipe =
           new CookingPotRecipe(
               recipeId,
-              groupIn,
-              tabIn,
-              inputItemsIn,
-              outputIn,
+              group,
+              tab,
+              inputItems,
+              output,
               container,
-              experienceIn,
-              cookTimeIn);
+              experience,
+              cookTime);
       ((NbtDataOwner) recipe).spectral_core$setCurrentNbtData(currentNbtData);
       cir.setReturnValue(recipe);
     }

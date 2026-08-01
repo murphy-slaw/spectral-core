@@ -26,6 +26,11 @@ repositories {
         name = 'Illusive Soulworks'
         url = 'https://maven.theillusivec4.top/'
     }
+    maven {
+        name = "Cassian's Maven"
+        url = 'https://maven.cassian.cc'
+    }
+
 
 }
 
