@@ -24,4 +24,4 @@ plugins {
 rootProject.name = 'spectral_core'
 include("common")
 include("fabric")
-include("forge")
+//include("forge")
