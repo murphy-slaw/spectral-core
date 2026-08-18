@@ -13,9 +13,7 @@
         "MixinCookingPotRecipe",
         "MixinCookingPotRecipeSerializer",
         "PlayerRespawnLogicMixin",
-        "ServerLevelMixin",
-        "SpectrumBlocksMixin",
-        "StructureCheckMixin"
+        "SpectrumBlocksMixin"
     ],
     "client": [
     ],
