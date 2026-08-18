@@ -1,5 +1,8 @@
 package net.funkpla.spectral_core;
 
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
+import net.funkpla.spectral_core.config.CoreConfig;
 import net.funkpla.spectral_core.platform.Services;
 import net.funkpla.spectral_core.platform.registration.RegistrationProvider;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -21,12 +24,15 @@ public class CommonClass {
             Constants.MOD_ID);
     public static final RegistrationProvider<BlockEntityType<?>> BLOCK_ENTITY_TYPES =
             RegistrationProvider.get(BuiltInRegistries.BLOCK_ENTITY_TYPE, Constants.MOD_ID);
+    public static CoreConfig CONFIG;
 
     public static ResourceLocation locate(String path) {
         return new ResourceLocation(Constants.MOD_ID, path);
     }
 
     public static void init() {
+        AutoConfig.register(CoreConfig.class, JanksonConfigSerializer::new);
+        CONFIG = AutoConfig.getConfigHolder(CoreConfig.class).getConfig();
         if (Services.PLATFORM.isModLoaded("spectral_core")) {
 
             Constants.LOG.info("Spectral Core loading…");

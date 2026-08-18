@@ -1,5 +1,6 @@
 package net.funkpla.spectral_core.mixin;
 
+import net.funkpla.spectral_core.CommonClass;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
@@ -10,6 +11,6 @@ public class HangingCoconutBlockMixin {
     @ModifyArg(method = "randomTick", at = @At(value = "INVOKE", target =
             "Lnet/minecraft/util/RandomSource;nextInt" + "(I)I", ordinal = 0), remap = false)
     private int spectral_core$changeGrowthRate(int b) {
-        return 5;
+        return CommonClass.CONFIG.coconutRipeningDelay;
     }
 }
