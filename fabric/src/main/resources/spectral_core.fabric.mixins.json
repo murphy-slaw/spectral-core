@@ -14,8 +14,16 @@
         "MixinCookingPotRecipeSerializer",
         "PlayerRespawnLogicMixin",
         "SpectrumBlocksMixin"
+        "SpectrumBlocksMixin",
+        "small_ships.BoatMixin",
+        "small_ships.DockyardRecipeMixin",
+        "small_ships.EntityMixin",
+        "small_ships.ShipMixin",
+        "small_ships.WaterSpawnFinderMixin"
     ],
     "client": [
+        "small_ships.DockyardScreenInvoker",
+        "small_ships.DockyardScreenMixin"
     ],
     "server": [
     ],

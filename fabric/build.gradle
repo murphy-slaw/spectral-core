@@ -87,14 +87,14 @@ dependencies {
     modImplementation "maven.modrinth:comforts:pMr60Kkq"
     modImplementation group: 'com.illusivesoulworks.spectrelib', name: 'spectrelib-fabric', version: "${spectrelib_version}"
     modImplementation "maven.modrinth:ecologics:${ecologics_version}-Fabric"
+
+    modImplementation "maven.modrinth:small-ships:${small_ships_version}-fabric-${minecraft_version}"
+    modImplementation 'maven.modrinth:forge-config-api-port:HvR3IdRE'
 }
 
 loom {
-    if (project(":common").file("src/main/resources/${mod_id}.accesswidener").exists()) {
-        accessWidenerPath.set(project(":common").file("src/main/resources/${mod_id}.accesswidener"))
-    }
-    mixin {
-        defaultRefmapName.set("${mod_id}.refmap.json")
+    if (project(":fabric").file("src/main/resources/${mod_id}.accesswidener").exists()) {
+        accessWidenerPath.set(project(":fabric").file("src/main/resources/${mod_id}.accesswidener"))
     }
     runs {
         client {
