@@ -12,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(DockyardRecipe.class)
 public class DockyardRecipeMixin {
 
+  /** Only allow nether woods to be selected in ultrawarm dimensions. */
   @Inject(method = "isWoodSelectable", at = @At("HEAD"), cancellable = true)
   private static void filterForNether(
       Boat.Type type, Player player, CallbackInfoReturnable<Boolean> cir) {

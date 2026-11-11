@@ -13,6 +13,8 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(Boat.class)
 public class BoatMixin {
+
+  /** Treat lava as water for nether wood ships. */
   @WrapOperation(
       method = "checkInWater",
       at =

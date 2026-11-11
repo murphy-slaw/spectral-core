@@ -9,6 +9,8 @@ import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(Entity.class)
 public class EntityMixin {
+
+  /** Make nether ships immune to fire. */
   @WrapMethod(method = "fireImmune")
   private boolean fireImmuneTweaked(Operation<Boolean> original) {
     if ((Entity) (Object) this instanceof Ship ship) {
