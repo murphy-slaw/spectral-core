@@ -6,6 +6,7 @@
     "compatibilityLevel": "JAVA_17",
     "mixins": [
         "BedrockAnvilScreenHandlerMixin",
+        "BlocksMixin",
         "CookingRecipeOutputAccessor",
         "GliderEventsMixin",
         "HangingCoconutBlockMixin",
@@ -13,7 +14,7 @@
         "MixinCookingPotRecipe",
         "MixinCookingPotRecipeSerializer",
         "PlayerRespawnLogicMixin",
-        "SpectrumBlocksMixin"
+        "RUBlocksMixin",
         "SpectrumBlocksMixin",
         "small_ships.BoatMixin",
         "small_ships.DockyardRecipeMixin",

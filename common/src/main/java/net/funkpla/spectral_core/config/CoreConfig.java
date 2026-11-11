@@ -9,4 +9,8 @@ import net.funkpla.spectral_core.Constants;
 public class CoreConfig implements ConfigData {
     public int lavaLevel = -117;
     public int coconutRipeningDelay = 5;
+    public int glowBerryLightLevel = 8;
+    public int dropleafLightLevel = 8;
+    public int bioshroomLightLevel = 8;
+    public int bioshroomBlockLightLevel = 12;
 }

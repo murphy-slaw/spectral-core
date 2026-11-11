@@ -44,10 +44,12 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     implementation project(":common")
+
     modApi("me.shedaniel.cloth:cloth-config-fabric:${cloth_config_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 
+    /*
     modImplementation("dev.emi:trinkets:${project.trinkets_version}")
     modImplementation("maven.modrinth:exclusions-lib:${project.exclusionslib_version}")
     modImplementation("maven.modrinth:Revelationary:${project.revelationary_version}")
@@ -56,28 +58,32 @@ dependencies {
     modImplementation("com.github.DaFuqs:DimensionalReverb:${project.dimensional_reverb_version}")
     modImplementation("maven.modrinth:fractal-lib:${project.fractal_version}")
     modImplementation("de.dafuqs:Matchbooks:${project.matchbooks_version}")
+    */
 
     modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}")
     modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}")
     modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-item:${project.cca_version}")
     modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-level:${project.cca_version}")
 
-
+    /*
     modImplementation("com.klikli_dev:modonomicon-${project.minecraft_version}-fabric:${project.modonomicon_version}") { exclude(group: "com.klikli_dev") }
     modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
     modImplementation("com.github.emilyploszaj:step-height-entity-attribute:${project.step_height_attribute_version}")
+     */
 
     modCompileOnly("maven.modrinth:gliders:${gliders_version}+fabric")
     modCompileOnly("net.threetag:PalladiumCore:${palladium_core_version}")
 
 
-    modImplementation("maven.modrinth:spectrum:${project.spectrum_version}") {
+    modCompileOnly("maven.modrinth:spectrum:${project.spectrum_version}-${minecraft_version}-fabric") {
         exclude(group: "com.unascribed:ears-api")
         exclude(group: "maven.modrinth:colorful-hearts")
     }
 
+    modImplementation("maven.modrinth:regions-unexplored:rhE8MT9Z")
+    modImplementation("maven.modrinth:terrablender:kmob8AJ4")
+
     modApi("com.terraformersmc:modmenu:${modmenu_version}")
-    modImplementation 'maven.modrinth:pocket-repose:1.2.7-1.20.1'
     implementation 'folk.sisby:kaleido-config:0.3.3+1.3.2'
     modImplementation("maven.modrinth:tinkerers-smithing:${tinkerers_version}")
     modImplementation("vectorwing:FarmersDelight:${fdrf_version}") {
