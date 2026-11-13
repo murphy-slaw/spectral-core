@@ -96,6 +96,7 @@ dependencies {
 
     modImplementation "maven.modrinth:small-ships:${small_ships_version}-fabric-${minecraft_version}"
     modImplementation 'maven.modrinth:forge-config-api-port:HvR3IdRE'
+    modImplementation 'maven.modrinth:spider-overhaul:EadVQIoH'
 }
 
 loom {
